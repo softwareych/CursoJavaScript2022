@@ -12,3 +12,10 @@ https://github.com/Klerith/javascript-basics/releases/tag/v0.0.2
 
 ## Seccion 4:
 https://github.com/Klerith/javascript-basics/releases/tag/v0.0.3
+
+##Seccion 5
+La carpeta assets se usa para colocar recursos estáticos de la app, que no serán removidos
+Librería https://underscorejs.org/ descargar la minimizada de produccion la ESM para usar _.shuffle que crea aletoriedad
+.push y .pop en los arreglos
+
+

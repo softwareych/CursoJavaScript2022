@@ -41,4 +41,18 @@ Librería https://underscorejs.org/ descargar la minimizada de produccion la ESM
   
   codigo: https://github.com/Klerith/js-blackjack/releases/tag/v1.0.0  juego blackjack
   
+ ## seccion 6
+ Patrón módulo: desde ESM5 se puede usar, es una seguridad a través de encapsulación (contenedor privado) para que nadie afuera pueda alterar variables ni llamar funciones. es un patrón de diseño a través de una función anónima autoinvocada
+ (() => { 
+  'use strict' 
+  luego poner el código aquí
+ })();
+ ahora si por la consola se intenta llamar por ej el deck() o el crearDeck() arrojará un error, es decir, no se puede manipular por el DOM, proteje el código
+ Ctrl +p, :149 enter... va a esa linea dentro del código
+ codigo optimizado: https://github.com/Klerith/js-blackjack/tree/master
+ Monimizar el código: https://www.toptal.com/developers/javascript-minifier/
+ allí pegar todo el código de juego.js y al darle minimize, el código estará más protejigdo, copiar el resultado en otro archivo: juego-min.js y cambiar en el index el script que hace referencia a juego.js por juego-min.js, el programa debe funcionar igual, eso incluso reduce los megas del código
+ 
+ 
+ 
   

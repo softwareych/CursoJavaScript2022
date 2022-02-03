@@ -54,5 +54,13 @@ Librería https://underscorejs.org/ descargar la minimizada de produccion la ESM
  allí pegar todo el código de juego.js y al darle minimize, el código estará más protejigdo, copiar el resultado en otro archivo: juego-min.js y cambiar en el index el script que hace referencia a juego.js por juego-min.js, el programa debe funcionar igual, eso incluso reduce los megas del código
  
  
+ ## Seccion 7
+ wwww.caniuse.com: pagina para conocer si lo que quiero usar en JS es soportado por el navegador web que usaré, busca classes , ES6, a partir de allí se puede usar
+ Las clases tienen por defecto e implictiamente el patrón de diseño  'use strict' 
+ Empiezan en mayúsculas y usan el upper camel case
+ Orden de una clase: Propiedades y metodos estaticos, propiedaddes de las clases, constructor, sets (establece valor) y gets ( recupera valor ), métodos, otras cosas privadas por último
+ ProtoType: es el adn de una instancia de un objeto, indica de donde viene, sus propiedades.
+ 
+ UNDEFINED: Valor por defecto al crear una variable y no definirle un valor
  
   

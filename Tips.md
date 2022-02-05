@@ -63,4 +63,24 @@ Librería https://underscorejs.org/ descargar la minimizada de produccion la ESM
  
  UNDEFINED: Valor por defecto al crear una variable y no definirle un valor
  
-  
+   
+ ## Seccion 8
+ npm node package managment
+ WEBPACK: empaquetador de modulos, ayuda a automatizar, las dependencias de la aplicacion, 
+ gestionar las dependencias
+ permite montar servidores de desarrollo y pruebas
+ cargar modulos
+ convertir a diferentes formatos ejemplo de es8 a es7
+ minima codigo
+ compilar de sass a css
+ compila ts a js
+ nos permite trabajar con js moderno y despreocuparnos si funcionara en otros mas  viejos
+ desventajas: la configuracion inicial es tediosa y puede ser complicado detectar problemas cuando  falla algun paquete
+ 
+ node js: permite correr codigo de JS en el lado del servidor, permite escribir tanto en back como front con js
+ 
+ libreria babel: convierte la aplicacion para que pueda trabajar en navegadores viejos, npm contienen mas de 350 mil paquetes
+ 
+ 
+ 
+ 

@@ -65,21 +65,131 @@ Librería https://underscorejs.org/ descargar la minimizada de produccion la ESM
  
    
  ## Seccion 8
- npm node package managment
+ babel npm node package managment
  WEBPACK: empaquetador de modulos, ayuda a automatizar, las dependencias de la aplicacion, 
  gestionar las dependencias
- permite montar servidores de desarrollo y pruebas
- cargar modulos
- convertir a diferentes formatos ejemplo de es8 a es7
- minima codigo
+ permite montar servidores de desarrollo y pruebas acelerando el proceso a pase a producción
+ cargar modulos que puedan segmentar la app para facil mantenimiento y soporte
+ convertir a diferentes formatos ejemplo de es8 a es5 
+ minimizar codigo
  compilar de sass a css
  compila ts a js
  nos permite trabajar con js moderno y despreocuparnos si funcionara en otros mas  viejos
+
+ 
  desventajas: la configuracion inicial es tediosa y puede ser complicado detectar problemas cuando  falla algun paquete
  
  node js: permite correr codigo de JS en el lado del servidor, permite escribir tanto en back como front con js
  
  libreria babel: convierte la aplicacion para que pueda trabajar en navegadores viejos, npm contienen mas de 350 mil paquetes
+ 
+  npm: permite gestionarcualquier paquete de node:
+ node --version enter
+ npm --version enter
+ npm init enter : crea el archivo package.json, todas las app de node tienen ese archivo donde se indica las dependencias de la app, que quiero pasar y que no a produccion
+ pedira un nombre de package, colocarle cualquier que desee, esto se puede cambiar luego
+ version por defecto es 1.0.0
+ descripcion:
+ enter 
+ en git repository puede ponerse el de uno
+ en keywords: ayuda en caso de que suban a lrepositorio de paquetes de node, sino solo enter
+ autor: mi nombre
+ la licencia dejaral igual ener
+ guardarcambios con enter
+ 
+ esto creará un archivo package.json con la información de arriba (no acepta comillas simples, deben ser dobles, estructura tipo objeto, pares de valores:
+ {
+  "name": "webpack-inicial",
+  "version": "1.0.0",
+  "description": "Este es un cascaron de un proyecto de de webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yenny Chipamo",
+  "license": "ISC"
+}
+ 
+
+ 
+https://webpack.js.org/
+ 
+ react y angular tienen ya configurado el webpack
+ 
+ ir a https://webpack.js.org/guides/getting-started/
+ copiar: 
+ npm install webpack webpack-cli --save-dev 
+ y pegarlo en laterminar, enter
+ 
+ cli --> herramienta que solo funciona en desarrollo, copia y mueve archivo, borra, cambiar nombre, miniza codigo, etc... al ejecutarla se coloca en el archivo package.json
+  "devDependencies": {
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  }
+ 
+ Luego añadir la linead el build asi:
+   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack" <--esta
+  },
+ 
+Luego ir a la terminal y colocar: npm run build
+                               
+ esto crea una carpeta llamada y archivo main: dist/main.js     
+colocar ese archiv oen el index reemplazando el scripts con ../dist/main.js  los ../ es para ir a un directorio atrasd el src
+a la función saludar colocarles la palabra export, para que funcione afuera del scope
+volver a hacer el npm run build enter y ejecutar 
+                               
+https://webpack.js.org/configuration/
+crear en la raíz el archivo webpack-config.js y colocar esto:
+
+module.exports = {
+    mode: 'development',
+
+    module: {
+        rules: []        
+    },
+
+    optimization: {},
+
+    plugins: [],
+}
+
+en el main se quitará el codigo minimizado y se vera mejor
+                               
+compilar  con  npm run build enter                             
+
+                               
+plugins de webpack
+https://webpack.js.org/loaders/html-loader/
+                               copiar el link: npm install --save-dev html-loader y pegarlo en laterminal para instalarlo
+                               
+https://webpack.js.org/plugins/html-webpack-plugin/                               
+                               npm install --save-dev html-webpack-plugin idem
+
+ en el archivo package.json deberían aparecer:
+  "devDependencies": {
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",    
+...
+ahora colocar esto en el webpack.config.js:
+                               
+    module: {
+        rules: [
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
+                options: {
+                    sources: false
+                }
+            }
+        ]        
+    },
+
+lo que hace es barrer los html y compilar: npm run build
+                               
+                               
+ 
  
  
  

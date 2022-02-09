@@ -187,10 +187,54 @@ ahora colocar esto en el webpack.config.js:
     },
 
 lo que hace es barrer los html y compilar: npm run build
+
+ webpack web serve:
+Configurar el localhost para que trabaje en el protocolo http o https no el file:
+                               
+https://webpack.js.org/configuration/dev-server/
+instalar en la terminal npm i -D webpack-dev-server
+modificar el webpack.config.js colocar el start
+                               y en la terminal colocar npm start
+ 
+ Uso de css: import
+https://webpack.js.org/loaders/css-loader/
+https://webpack.js.org/loaders/style-loader/
+                               
+instalar ambas dependencias a la vez:                               
+en la terminal: npm install --save-dev css-loader style-loader 
+                               
+en el components.js: import '../css/components.css';
+                               
+se veran en el package.json
+colocar nueva regla en el webpack.config:
+            {
+                test: /\.css$/
+                use: ['style-loader', 'css-loader']
+            }
+                               
+ Incluir stylos generadles:
+                               
+https://webpack.js.org/plugins/mini-css-extract-plugin/
+ver el config.js
+npm install --save-dev mini-css-extract-plugin //en la terminal
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");     //esto colcoarlo en el config                          
+                               
+ Manejo de imagenes:
+https://v4.webpack.js.org/loaders/file-loader/
+sacar $ npm install file-loader --save-dev e instalarlo    
+                               
+en components
+           {
+                test: /\.(png|jpe?g|gif)$/,
+                loader: 'file-loader'
+            }
+                               
+https://webpack.js.org/plugins/copy-webpack-plugin/#root
                                
                                
- 
- 
- 
- 
- 
+https://babeljs.io/
+                               
+Proyecto del curso:                               
+                               https://github.com/Klerith/js-moderno-webpack
+                               
+                               

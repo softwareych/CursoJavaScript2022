@@ -13,3 +13,4 @@ mensaje = `Cerrado ${ hora}`;
 //condicion ternaria ? :
 horaApertura = ([0,6].includes( dia)) ? 9 : 11; //0 y 6 son fines de semana
 console.log(horaApertura);
+
